@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page of the Serie - Stranger Things</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="icon" href="./IMG/Stranger-Things-Logo-2016.png">
+    <link rel="stylesheet" href="./CSS/Style.css">
+</head>
+<body>
+    
+    <main>
+        <header>
+            <a href="#" class="logo"><img src="./IMG/logo.png" alt="logo"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">My List</a></li>
+                <li><a href="../Simulated-Page-Netflix/Serie2/Serie.html">Next Serie</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button class="btnbuscar"><span class="material-icons">search</span></button>
+            </div>
+        </header>
+
+        <section class="banner">
+            <img src="./IMG/stranger-things-every-seasons.avif" alt="Person" class="bg">
+            <span class="sombraImg"></span>
+            <!-- Content -->
+            <div class="content">
+                <img src="./IMG/Stranger-Things-Logo-2016.png" alt="Letras" class="movieTitle">
+                <h4>
+                    <span>2016</span>
+                    <span><i>16+</i></span>
+                    <span>4 Temporadas</span>
+                    <span>Serie</span>
+                </h4>
+                <p>
+                    Stranger Things es una serie de televisión dramática y de misterio que se desarrolla en el pueblo ficticio de Hawkins, Indiana, en los años 80: 
+
+                    La serie comienza con la desaparición de un niño, Will Byers, en noviembre de 1983. Este hecho desencadena el descubrimiento de un misterio relacionado con experimentos secretos, fuerzas sobrenaturales y una niña muy extraña.
+                </p>
+
+                <div class="buttons">
+                    <a href="#">Play</a>
+                    <a href="#">My List</a>
+                </div>
+            </div>
+            
+            <a href="#" class="play" onclick="toggleVideo()"><img src="./IMG/play.png" alt="play">Watch Trailer</a>
+        </section>
+
+        <section class="trailer">
+            <video src="./IMG/trailer.mp4" controls="true"></video>
+            <img src="./IMG/close.png" class="close" onclick="toggleVideo()">
+        </section>
+    </main>
+
+
+    <script>
+        function toggleVideo() {
+            const trailer = document.querySelector(".trailer");
+            const video = document.querySelector(".video");
+
+            trailer.classList.toggle("active");
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>

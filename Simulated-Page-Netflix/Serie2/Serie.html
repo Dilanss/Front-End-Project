@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page of the Serie - Stranger Things</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="icon" href="./IMG/logoletras.png">
+    <link rel="stylesheet" href="../CSS/Style.css">
+</head>
+<body>
+    
+    <main>
+        <header>
+            <a href="#" class="logo"><img src="../IMG/logo.png" alt="logo"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">My List</a></li>
+                <li><a href="../index.html">Stranger Things</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button class="btnbuscar"><span class="material-icons">search</span></button>
+            </div>
+        </header>
+
+        <section class="banner">
+            <img src="./IMG/tms.jpg" alt="Person" class="bg">
+            <span class="sombraImg"></span>
+            <!-- Content -->
+            <div class="content">
+                <img src="./IMG/logoletras.png" alt="Letras" class="movieTitle">
+                <h4>
+                    <span>2024</span>
+                    <span><i>16+</i></span>
+                    <span>6 Temporadas</span>
+                    <span>Serie</span>
+                </h4>
+                <p>
+                    Peaky Blinders es una serie británica de drama que narra la historia de una banda criminal que controla Birmingham en las décadas de 1920 y 1930. La serie se centra en Thomas Shelby, el líder de la banda, y su lucha por alcanzar el éxito sin importar el costo.
+                </p>
+
+                <div class="buttons">
+                    <a href="#">Play</a>
+                    <a href="#">My List</a>
+                </div>
+            </div>
+            
+            <a href="#" class="play" onclick="toggleVideo()"><img src="../IMG/play.png" alt="play">Watch Trailer</a>
+        </section>
+
+        <section class="trailer">
+            <video src="../IMG/trailer.mp4" controls="true"></video>
+            <img src="../IMG/close.png" class="close" onclick="toggleVideo()">
+        </section>
+    </main>
+
+    <script>
+        function toggleVideo() {
+            const trailer = document.querySelector(".trailer");
+            const video = document.querySelector(".video");
+
+            trailer.classList.toggle("active");
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
